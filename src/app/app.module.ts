@@ -5,18 +5,23 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookService } from './services/book.service'
-import { from } from 'rxjs';
 import { AdminComponent } from './components/admin/admin.component';
+import { HomeComponent } from './components/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ViewRegistrationComponent } from './components/view-registration/view-registration.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent
+    AdminComponent,
+    HomeComponent,
+    ViewRegistrationComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

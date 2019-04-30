@@ -8,7 +8,7 @@ import { BookService } from '../../services/book.service'
 })
 export class AdminComponent implements OnInit {
 
-  public books;
+  public books: Object;
 
   constructor(private bookService:BookService) { }
 
@@ -25,5 +25,4 @@ export class AdminComponent implements OnInit {
       () => console.log("Book Loaded.")
     );
   }
-
 }

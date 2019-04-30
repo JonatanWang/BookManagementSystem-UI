@@ -1,23 +1,23 @@
 <div class="container">
   <table class="table table-bordered table-inverse">
     <tr>
-      <th>Name</th>
+      <th>Title</th>
       <th>ISBN</th>
       <th>Date</th>
       <th class="text-right">Price</th>
     </tr>
     <tr *ngFor="let book of books">
       <td>
-        {{book.Name}}
+        <a [routerLink]="['/admin/view/', book.id]" >{{book.name}}</a>
       </td>
       <td>
-        {{book.ISBN}}
+        {{book.isbn}}
       </td>
       <td>
-        {{book.Date}}
+        {{book.date}}
       </td>
       <td class="text-right">
-        {{book.Price}}
+        {{book.price}}
       </td>
     </tr>
   </table>
