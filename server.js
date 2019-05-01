@@ -22,7 +22,7 @@ app.use('/server', proxy('http://localhost:8080'));
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/book-ui/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 /**
