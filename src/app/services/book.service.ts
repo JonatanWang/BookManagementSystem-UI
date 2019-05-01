@@ -13,13 +13,19 @@ export class BookService {
   constructor(private http:HttpClient) { }
 
   getBooks() {
+    let token = localStorage.getItem('access_token');
 
-    return this.http.get('server/api/v1/books');
+    return this.http.get('server/api/v1/books', {
+      headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
+    });
   }
 
   getBook(id : number) {
+    let token = localStorage.getItem('access_token');
 
-    return this.http.get('server/api/v1/books/' + id);
+    return this.http.get('server/api/v1/books/' + id, {
+      headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
+    });
   }
 
   createBookRegistration(book: any) {
