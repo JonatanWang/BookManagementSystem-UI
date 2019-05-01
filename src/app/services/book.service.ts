@@ -22,8 +22,9 @@ export class BookService {
     return this.http.get('server/api/v1/books/' + id);
   }
 
-  createBookRegistration(book) {
+  createBookRegistration(book: any) {
     let body = JSON.stringify(book);
+    console.log(body);
     return this.http.post('server/api/v1/books', body, httpOptions);
   }
 }

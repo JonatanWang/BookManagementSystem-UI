@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   submitRegistration() {
+    console.log(this.bookForm.value);
     if(this.bookForm.valid) {
       this.validMessage = "Your registration is valid, thank you.";
       this.bookService.createBookRegistration(this.bookForm.value)

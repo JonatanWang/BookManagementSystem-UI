@@ -1,6 +1,6 @@
 
 <div class="container">
-  <form [formGroup]="bookform" (ngSubmit)="submitRegistration()" novalidate>
+  <form [formGroup]="bookForm" (ngSubmit)="submitRegistration()" novalidate>
     <div *ngIf="validMessage != ''">
       <h3 class="has-info">Valid Message: {{ validMessage }}</h3>
     </div>    
@@ -10,16 +10,19 @@
     </div>
     <div class="form-group">
       <label>ISBN</label>
-      <input type="email" class="form-control" formControlName="isbn" required/>
+      <input type="text" class="form-control" formControlName="isbn" required/>
     </div>
+
     <div class="form-group">
       <label>Date</label>
       <input type="text" class="form-control" formControlName="date" required/>
     </div>
+
     <div class="form-group">
       <label>Price</label>
       <input type="text" class="form-control" formControlName="price" required/>
     </div>
+    
     <button type="submit" class="btn btn-primary" >Submit</button>
   </form>
 </div>
