@@ -14,7 +14,7 @@ export class BookService {
 
   getBooks() {
     let token = localStorage.getItem('access_token');
-
+    console.log(token);
     return this.http.get('server/api/v1/books', {
       headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
     });

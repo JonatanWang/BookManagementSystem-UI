@@ -7,7 +7,7 @@ import * as auth0 from 'auth0-js';
 export class AuthService {
 
   auth0 = new auth0.WebAuth({
-    clientID: 'JBbu9l4WtFL4PDQvOlKLh1WZDEVsmJao',
+    clientID: 'nKGCXjpAKHft5yfmYFVHn6Mu350wnZyK',
     domain: 'zhengyu.eu.auth0.com',
     responseType: 'token id_token',
     audience: 'http://localhost:8080',
